@@ -202,7 +202,7 @@ img {
 
 .menu-link::after {
     position: absolute;
-    top: 44px;
+    top: 45px;
     left: 0;
 
     opacity: 0;
@@ -223,10 +223,14 @@ img {
     opacity: 1;
 }
 
+.current{
+    color: var(--primary-focus-hover-clr);
+}
+
 .current::after {
     display: block;
-    position: relative;
-    top: 20px;
+    position: absolute;
+    top: 45px;
     left: 0;
 
     opacity: 1;
@@ -514,7 +518,7 @@ img {
 }
 
 .team-item {
-    width: calc((100%-72px)/4);
+    width: 264px;
 
     border-radius: 0px 0px var(--primary-border-radius) var(--primary-border-radius);
 
@@ -677,7 +681,8 @@ img {
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-btn:hover,
@@ -738,6 +743,7 @@ img {
     height: 100%;
     top: 0;
     left: 0;
+
     transform: translateY(100%);
     
     background-color: var(--primary-brand-clr);
@@ -747,12 +753,12 @@ img {
 
 .overflow-text {
     padding: 40px 32px;
-
+    
     font-weight: 400;
     font-size: var(--primary-font-size);
     line-height: var(--primary-line-height);
     letter-spacing: 0.02em;
-
+    
     opacity: 0;
     
     color: var(--secondary--inverted-text-clr);
@@ -760,13 +766,13 @@ img {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 }
 
-.filters-item>link:hover .overflow-box,
- .filters-item>link:focus .overflow-box{
+.link:hover .overflow-box,
+.link:focus .overflow-box{
     transform: translateY(0);
 }
 
-.filters-item>link:hover .overflow-text,
- .filters-item>link:focus .overflow-text{
+.link:hover .overflow-text,
+.link:focus .overflow-text{
     opacity: 1;
 }
 
